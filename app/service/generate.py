@@ -1,8 +1,15 @@
 from openai import AsyncOpenAI
 from config import AI_TOKEN
 
+import os
+from dotenv import load_dotenv
+
 import aiohttp
 from urllib.parse import quote
+
+load_dotenv()
+
+AI_TOKEN = os.getenv('AI_TOKEN')
 
 
 async def ai_generate(text: str):
