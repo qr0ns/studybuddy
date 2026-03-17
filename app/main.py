@@ -6,8 +6,15 @@ from aiogram import Dispatcher, Bot
 from aiogram.enums import ParseMode
 from aiogram.client.session.aiohttp import AiohttpSession
 
-from config import TOKEN_API
+import os
+from dotenv import load_dotenv
+
 from handlers import router
+
+
+load_dotenv()
+
+TOKEN_API = os.getenv('TOKEN_API')
 
 #session = AiohttpSession(proxy="http://proxy.server:3128")
 
