@@ -5,9 +5,9 @@ from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 from aiogram.enums import ParseMode
 
-from func import create_kb, create_youtube_link
+from service.func import create_kb, create_youtube_link 
 
-from generate import ai_generate
+from service.generate import ai_generate
 
 from texts import *
 
